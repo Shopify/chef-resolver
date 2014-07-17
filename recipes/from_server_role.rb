@@ -18,7 +18,7 @@
 #
 
 nameservers =
-  search(:node, "role:#{node['resolver']['server_role']}").
+  search(:node, "role:#{node['resolver']['server_role']} AND tags:enabled").
     map {|node| node['ipaddress'] } +
   node['resolver']['nameservers']
 

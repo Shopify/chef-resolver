@@ -18,7 +18,7 @@
 #
 
 nameservers =
-  search(:node, "role:#{node['resolver']['server_role']} AND chef_environment:#{node.chef_environment}").
+  search(:node, "role:#{node['resolver']['server_role']}").
     map {|node| node['ipaddress'] } +
   node['resolver']['nameservers']
 

@@ -20,7 +20,7 @@ Use one of the recipes to set up /etc/resolv.conf for your system(s).
 Configure /etc/resolv.conf based on attributes.
 
 ### from_server_role
-Configure /etc/resolv.conf's nameservers based on a search for a specific role (by Chef environment).
+Configure /etc/resolv.conf's nameservers based on a search for a specific role.
 
 
 Usage
@@ -47,7 +47,7 @@ nameserver 10.13.37.40
 options timeout:2 rotate
 ```
 
-Using the `from_server_role` recipe, assign the `node['resolver']['server_role']` attribute's role to a system that is the DNS resolver in the same Chef environment.
+Using the `from_server_role` recipe, assign the `node['resolver']['server_role']` attribute's role to a system that is the DNS resolver.
 
 
 License & Authors

@@ -38,5 +38,6 @@ template "/etc/resolv.conf" do
     'nameservers' => nameservers.sort,
     'options' => node['resolver']['options']
   )
+  manage_symlinks_source false if node['resolver']['force_manage']
+  force_unlink true if node['resolver']['force_manage']
 end
-

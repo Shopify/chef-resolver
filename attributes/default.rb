@@ -21,3 +21,4 @@ default['resolver']['search'] = node['domain']
 default['resolver']['nameservers'] = []
 default['resolver']['options'] = {}
 default['resolver']['server_role'] = 'nameserver'
+default['resolver']['force_manage'] = false
